@@ -1,0 +1,44 @@
+yarn init -y
+yarn add typescript ts-node-dev @types/node tsconfig-paths -D
+npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true
+yarn tsc
+//library ts-node-dev para execução de aplicações em desenvolvimento
+yarn add -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin //instalar eslint no projeto
+yarn lint //executa o script lint que defini no package.json
+yarn lint-fix //executa o script "lint-fix" que defini no package.json O ESLint pode receber um parâmetro --fix para que tente corrigir automaticamente os problemas encontrados.
+yarn add prettier -D
+yarn add eslint-config-prettier@6.15.0 eslint-plugin-prettier@3.2.0 -D //eslint-config-prettier: Desativa todas as regras ESLint que têm o potencial de interferir com as regras do Prettier. //eslint-plugin-prettier: Transforma regras do Prettier em regras ESLint.
+mkdir -p src/share // -p para criar a estrutura
+yarn add -D tsconfig-paths //recurso que facilitará o processo de importação de arquivos em nosso projeto, configurado no script dev do package.json também
+yarn add express cors express-async-errors //instala express cors e o express-async-erros para conseguir trabalahr com requisições assincronas no caso de tratamento de erros
+yarn add -D @types/express @types/cors //instalar os types do express e do cors
+yarn add typeorm reflect-metadata mysql2 //instala typeorm, o reflect metadata que é exigido para trabalhar com typescript
+[docker]
+docker -h //listar as opções do comando docker
+docker run ... //criar e executar um container
+docker start <container-name> //executar um container
+docker stop <container-name> //encerrar a execução de um container
+docker ps //listar containers em execução
+docker ps -a //listar todos os containers
+docker rm <container-name> //Excluir um container
+docker images //listar todas as imagens no package
+docker rmi <image-name> //excluir uma imagem package
+docker logs <container-name> //exibir os logs da execução do container
+docker inspect <container-name> //Exibir todas as informações do container
+docker info //Exibir as informações do Docker
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:latest //cria um container com mysql. -d indica para não deixar o shell preso.
+sem o -D o container entra em execução e o shell fica preso.
+yarn typeorm migration:create -n CreateProducts //criar migração que irá criar a tabela de produtos
+yarn typeorm migration:run
+//descomentar algumas coisas no tsconfig.json (aula 25)
+
+
+
+
+
+
+
+
+
+
+
