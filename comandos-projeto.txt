@@ -13,6 +13,8 @@ yarn add -D tsconfig-paths //recurso que facilitará o processo de importação 
 yarn add express cors express-async-errors //instala express cors e o express-async-erros para conseguir trabalahr com requisições assincronas no caso de tratamento de erros
 yarn add -D @types/express @types/cors //instalar os types do express e do cors
 yarn add typeorm reflect-metadata mysql2 //instala typeorm, o reflect metadata que é exigido para trabalhar com typescript
+yarn add celebrate // library de validacao
+yarn add -D @types/joi //types do celebrate (roda joi por tras dos panos)
 [docker]
 docker -h //listar as opções do comando docker
 docker run ... //criar e executar um container
