@@ -15,6 +15,8 @@ yarn add -D @types/express @types/cors //instalar os types do express e do cors
 yarn add typeorm reflect-metadata mysql2 //instala typeorm, o reflect metadata que é exigido para trabalhar com typescript
 yarn add celebrate // library de validacao
 yarn add -D @types/joi //types do celebrate (roda joi por tras dos panos)
+yarn typeorm migration:create -n CreateProducts //criar migração que irá criar a tabela de produtos
+yarn typeorm migration:run
 [docker]
 docker -h //listar as opções do comando docker
 docker run ... //criar e executar um container
@@ -30,9 +32,9 @@ docker inspect <container-name> //Exibir todas as informações do container
 docker info //Exibir as informações do Docker
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:latest //cria um container com mysql. -d indica para não deixar o shell preso.
 sem o -D o container entra em execução e o shell fica preso.
-yarn typeorm migration:create -n CreateProducts //criar migração que irá criar a tabela de produtos
-yarn typeorm migration:run
 //descomentar algumas coisas no tsconfig.json (aula 25)
+[git]
+git config --global pager.branch false //caso o git liste os branchs usando o editor vim
 
 
 
