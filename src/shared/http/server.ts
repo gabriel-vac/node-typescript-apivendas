@@ -6,12 +6,13 @@ import { errors } from 'celebrate'; // tratar os erros do celebrate (aula 36)
 import routes from './routes';
 import AppError from '@shared/errors/AppError';
 import '@shared/typeorm';
+import uploadConfig from '@config/upload';
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-
+app.use('/files', express.static(uploadConfig.directory)); //rota estatica para pegar as imagens
 app.use(routes);
 
 app.use(errors()); //erro do celebrate, se gerar erro o middleware seguinte ira tratar também
