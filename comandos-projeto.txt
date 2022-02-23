@@ -16,7 +16,10 @@ yarn add typeorm reflect-metadata mysql2 //instala typeorm, o reflect metadata q
 yarn add celebrate // library de validacao
 yarn add -D @types/joi //types do celebrate (roda joi por tras dos panos)
 yarn typeorm migration:create -n CreateProducts //criar migração que irá criar a tabela de produtos
-yarn typeorm migration:run
+yarn typeorm migration:run //rodar as migrações que não foram criadas no banco de dados
+yarn typeorm migration:create -n CreateUsers //criar migration users
+yarn add bcryptjs //lib criptografia
+yarn add -D @types/bcryptjs
 [docker]
 docker -h //listar as opções do comando docker
 docker run ... //criar e executar um container
@@ -35,6 +38,8 @@ sem o -D o container entra em execução e o shell fica preso.
 //descomentar algumas coisas no tsconfig.json (aula 25)
 [git]
 git config --global pager.branch false //caso o git liste os branchs usando o editor vim
+[info]
+os repositórios são criados quando queremos customizar, criar metodos alem daqueles que ja vem pre definidos pelo typeorm
 
 
 
