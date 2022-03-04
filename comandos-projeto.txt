@@ -24,6 +24,8 @@ yarn add jsonwebtoken
 yarn add -D @types/jsonwebtoken
 yarn add multer //lib para enviar arquivos
 yarn add -D @types/multer
+yarn typeorm migration:create -n CreateUserTokens
+yarn add date-fns
 [docker]
 docker -h //listar as opções do comando docker
 docker run ... //criar e executar um container
